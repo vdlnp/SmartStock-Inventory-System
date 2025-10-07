@@ -7,7 +7,7 @@ body {
 
 header {
   background-color: #007bff;
-  color: white;
+  color: black;
   text-align: center;
   padding: 20px 0;
 }
@@ -80,3 +80,4 @@ footer {
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
+
