@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SmartStock Login</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      background: linear-gradient(135deg, #ff8800, #ffa94d);
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #333;
+    }
+
+    .login-container {
+      background: #fffaf5;
+      padding: 40px 50px;
+      border-radius: 14px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+      text-align: center;
+      width: 90%;
+      max-width: 400px;
+    }
+
+    .login-container h1 {
+      color: #ff8800;
+      margin-bottom: 10px;
+    }
+
+    .login-container p {
+      color: #666;
+      margin-bottom: 25px;
+      font-size: 0.95rem;
+    }
+
+    .login-btn {
+      padding: 12px 24px;
+      background: linear-gradient(90deg, #ff8800, #ffa94d);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+    }
+
+    .login-btn:hover {
+      background: linear-gradient(90deg, #e37200, #ff8800);
+      transform: translateY(-2px);
+    }
+
+    footer {
+      position: absolute;
+      bottom: 15px;
+      text-align: center;
+      width: 100%;
+      color: white;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <h1><i class="fa-solid fa-boxes-stacked"></i> SmartStock</h1>
+    <p>Welcome back! Click below to access your inventory dashboard.</p>
+    <button class="login-btn" onclick="login()">Login</button>
+  </div>
+
+  <footer>© 2025 SmartStock | Built by Viandra</footer>
+
+  <script>
+    function login() {
+      document.body.style.transition = "opacity 0.5s ease";
+      document.body.style.opacity = 0;
+      setTimeout(() => {
+        window.location.href = "index.html";
+      }, 500);
+    }
+  </script>
+</body>
+</html>

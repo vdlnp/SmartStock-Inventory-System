@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SmartStock Inventory Management System</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo"><i class="fa-solid fa-boxes-stacked"></i> SmartStock</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="index.html">Inventory</a>
+      <a href="index.html">Reports</a>
+      <a href="login.html" id="logoutBtn">Logout</a>
+    </nav>
+    
+  </header>
+
+  <main>
+    <section class="dashboard">
+      <h1>Inventory Dashboard</h1>
+      <p class="subtitle">Easily track and manage office supplies in real-time.</p>
+    </section>
+
+    <section class="card add-item">
+      <h2><i class="fa-solid fa-plus"></i> Add New Item</h2>
+      <div class="form-group">
+        <input type="text" id="itemName" placeholder="Item Name (e.g. Pen)" />
+        <input type="number" id="itemQuantity" placeholder="Quantity" />
+        <input type="number" id="itemPrice" placeholder="Price (RM)" step="0.01" />
+        <button id="addBtn">Add Item</button>
+      </div>
+    </section>
+
+    <section class="card inventory-list">
+      <h2><i class="fa-solid fa-clipboard-list"></i> Inventory List</h2>
+
+      <div class="total-summary">
+        <strong>Total Inventory Value:</strong> RM <span id="totalValue">0.00</span>
+      </div>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Item</th>
+            <th>Quantity</th>
+            <th>Price (RM)</th>
+            <th>Total (RM)</th>
+            <th>Date Added</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="inventoryTable">
+          <!-- Items will appear here -->
+        </tbody>
+      </table>
+
+      <button class="print-btn" onclick="window.print()">
+        <i class="fa-solid fa-print"></i> Print Report
+      </button>
+
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 SmartStock | Built by Viandra</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
